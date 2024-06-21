@@ -1,0 +1,28 @@
+---
+export function getStaticPaths() {
+  return [{ params: { music: "id&playlist1" } }];
+}
+
+import Layout from "../../layouts/Layout.astro";
+import SideBar from "../../components/SideBar.astro";
+import Card from "../../components/card/playlist/Card";
+import SideMain from "../../components/SideMain.svelte";
+
+const { music } = Astro.params;
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="flex" transition:name="hero">
+    <SideBar />
+    <section class="w-full bg-neutral-950">
+      <SideMain
+        Image="https://f4.bcbits.com/img/a1435058381_65.jpg"
+        Title="PlayList - Lo-Fi."
+        ArtistPeople="NoAngel."
+      />
+      <div class="w-[500px] mx-auto text-center">
+        <Card />
+      </div>
+    </section>
+  </main>
+</Layout>

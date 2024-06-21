@@ -1,0 +1,33 @@
+---
+import SideBarItem from "./sidebar/SideBarItem.tsx";
+import Library from "../../public/icons/Library.astro";
+import Home from "../../public/icons/Home.astro";
+import Search from "../../public/icons/Search.astro";
+import { playlists } from "../lib/data";
+---
+
+<aside class="w-[400px] h-screen sticky top-0">
+  <ul>
+    <div
+      class="bg-neutral-950 p-2 m-1 grid grid-cols-1 gap-3 *:flex *:items-center *:gap-2 *:mt-3 rounded-lg"
+    >
+      <a href="/" class="opacity-80">
+        <Home />
+        <span>Inicio</span>
+      </a>
+      <a href="/" class="opacity-80">
+        <Search />
+        <span>Buscar</span>
+      </a>
+    </div>
+    <div class="bg-neutral-950 p-2 m-1 rounded-xl h-screen">
+      <li class="opacity-70 flex items-center gap-2">
+        <Library />
+        <span>Tu biblioteca.</span>
+      </li>
+      <div class="container">
+        <SideBarItem />
+      </div>
+    </div>
+  </ul>
+</aside>

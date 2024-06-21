@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SideBar from "../components/SideBar.astro";
+import Gretting from "../components/Gretting.svelte";
+import CardItems from "../components/card/CardItems.tsx";
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="flex" transition:name="hero">
+    <SideBar />
+    <section class="w-full bg-neutral-950">
+      <Gretting />
+      <CardItems />
+    </section>
+  </main>
+</Layout>
