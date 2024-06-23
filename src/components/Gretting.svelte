@@ -6,9 +6,9 @@
 
   let gretting = "";
 
-  if (currentHour < 12) {
+  if (currentHour <= 12) {
     gretting = "Buenos días.";
-  } else if (currentHour < 18) {
+  } else if (currentHour <= 18) {
     gretting = "Buenas tardes.";
   } else {
     gretting = "Buenas noches.";
